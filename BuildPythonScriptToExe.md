@@ -13,8 +13,9 @@ pip install cx_Freeze
 - Create a setup script (e.g., `setup.py`) in the same directory as Python script.
 - This script will provide the configuration for `cx_Freeze`.
 
-from cx_Freeze import setup, Executable
 ```python
+from cx_Freeze import setup, Executable
+
 setup(
     name="YourAppName",
     version="1.0",
