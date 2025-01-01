@@ -1,6 +1,14 @@
 # How to build py script to exe
 
-## Step 1: Install cx_Freeze
+## Way 1
+- Run script at the same directory as Python script `to build your program to one file`.
+
+```cmd
+python -m PyInstaller `YourFile.py` --onefile
+```
+## Way 2
+
+### Step 1: Install cx_Freeze
 
 - Make sure you have `cx_Freeze` installed. You can install it using pip
 
@@ -8,7 +16,7 @@
 pip install cx_Freeze
 ```
 
-## Step 2: Create a setup script
+### Step 2: Create a setup script
 
 - Create a setup script (e.g., `setup.py`) in the same directory as Python script.
 - This script will provide the configuration for `cx_Freeze`.
@@ -25,7 +33,7 @@ setup(
 ```
 - Replace `YourAppName` and `Your application description` with your application’s name and description and `your_script.py` with the name of your Python script.
 
-## Step 3: Run the setup script
+### Step 3: Run the setup script
 
 - Open a terminal, navigate to the directory containing your Python script and the `setup.py` file, and run:
 ```
@@ -33,7 +41,7 @@ python setup.py build
 ```
 - This will create a `build` directory containing the executable file.
 
-## Step 4: Locate the executable
+### Step 4: Locate the executable
 
 - After running the `build` command, you can find the executable in the `build` directory. It will be inside a subdirectory with the name of your operating system (e.g., `build\exe.win-amd64-3.8` for a Windows 64-bit executable).
 
